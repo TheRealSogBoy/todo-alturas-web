@@ -6,6 +6,7 @@ import Link from "next/link";
 import { COURSES } from "@/lib/config";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { QuoteForm } from "@/components/forms/QuoteForm";
+import { getAssetPath } from "@/lib/paths";
 import {
   Clock,
   CheckCircle2,
@@ -39,7 +40,7 @@ export default function CapacitacionesPage() {
       <section className="relative py-20 lg:py-28 border-b border-[#222] bg-[#0F0F0F] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/industrial-training.jpg"
+            src={getAssetPath("/images/industrial-training.jpg")}
             alt="Capacitación y formación técnica en trabajo seguro en alturas"
             fill
             priority

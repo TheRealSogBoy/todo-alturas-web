@@ -5,6 +5,7 @@ import Link from "next/link";
 import { SITE_CONFIG, TRUST_PILLARS } from "@/lib/config";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
+import { getAssetPath } from "@/lib/paths";
 import {
   Building2,
   ShieldCheck,
@@ -28,7 +29,7 @@ export default function NosotrosPage() {
       <section className="relative py-20 lg:py-28 border-b border-[#222] bg-[#0F0F0F] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-industrial.jpg"
+            src={getAssetPath("/images/hero-industrial.jpg")}
             alt="Nosotros - Todo Alturas"
             fill
             priority
@@ -67,7 +68,7 @@ export default function NosotrosPage() {
             <div className="lg:col-span-5 relative">
               <div className="relative h-[380px] sm:h-[450px] rounded-2xl overflow-hidden border border-[#2D2D2D] shadow-2xl">
                 <Image
-                  src="/images/rescue-operations.jpg"
+                  src={getAssetPath("/images/rescue-operations.jpg")}
                   alt="Operaciones de alto riesgo y rescate técnico"
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"

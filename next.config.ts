@@ -1,14 +1,17 @@
 import type { NextConfig } from "next";
 
-const isGithubActions = process.env.GITHUB_ACTIONS === "true";
-const repoName = "todo-alturas-web";
+// Always use the repo prefix so all assets and links work 100% on GitHub Pages
+const repoName = "/todo-alturas-web";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: isGithubActions ? `/${repoName}` : "",
-  assetPrefix: isGithubActions ? `/${repoName}/` : "",
+  basePath: repoName,
+  assetPrefix: `${repoName}/`,
   images: {
     unoptimized: true,
+  },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: repoName,
   },
 };
 

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { QuoteForm } from "@/components/forms/QuoteForm";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { getAssetPath } from "@/lib/paths";
 import {
   Ruler,
   ShieldCheck,
@@ -97,7 +98,7 @@ export default function IngenieriaPage() {
       <section className="relative py-20 lg:py-28 border-b border-[#222] bg-[#0E0E0E] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/engineering-structure.jpg"
+            src={getAssetPath("/images/engineering-structure.jpg")}
             alt="Ingeniería contra caídas y líneas de vida"
             fill
             priority

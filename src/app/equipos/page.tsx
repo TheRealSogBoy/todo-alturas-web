@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { QuoteForm } from "@/components/forms/QuoteForm";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { getAssetPath } from "@/lib/paths";
 import {
   ShieldCheck,
   CheckCircle2,
@@ -109,7 +110,7 @@ export default function EquiposPage() {
       <section className="relative py-20 lg:py-28 border-b border-[#222] bg-[#0E0E0E] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/safety-equipment.jpg"
+            src={getAssetPath("/images/safety-equipment.jpg")}
             alt="Equipos de seguridad industrial y arneses certificados"
             fill
             priority
