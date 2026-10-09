@@ -4,13 +4,15 @@ import Link from "next/link";
 import { ArrowRight, ShieldCheck, CheckCircle2, Award } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/config";
 
+import { getAssetPath } from "@/lib/paths";
+
 export function HeroSection() {
   return (
     <section className="relative min-h-[88vh] lg:min-h-[92vh] flex items-center bg-[#0B0B0B] overflow-hidden border-b border-[#222]">
       {/* Background Industrial Image with Gradual Dark Overlays */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-industrial.jpg"
+          src={getAssetPath("/images/hero-industrial.jpg")}
           alt="Operaciones industriales de alto riesgo y trabajo seguro en alturas"
           fill
           priority

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, ShieldCheck, Ruler, Wrench } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { getAssetPath } from "@/lib/paths";
 
 export function EngineeringFeature() {
   return (
@@ -15,7 +16,7 @@ export function EngineeringFeature() {
           <div className="lg:col-span-6 relative">
             <div className="relative h-[380px] sm:h-[480px] w-full rounded-2xl overflow-hidden border border-[#2D2D2D] shadow-2xl">
               <Image
-                src="/images/engineering-structure.jpg"
+                src={getAssetPath("/images/engineering-structure.jpg")}
                 alt="Montaje de sistemas de ingeniería y líneas de vida en cubierta industrial"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

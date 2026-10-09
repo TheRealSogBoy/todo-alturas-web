@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { TRUST_PILLARS } from "@/lib/config";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { getAssetPath } from "@/lib/paths";
 
 export function WhyUsSection() {
   return (
@@ -12,7 +13,7 @@ export function WhyUsSection() {
           <div className="lg:col-span-5 order-2 lg:order-1 relative">
             <div className="relative h-[420px] sm:h-[500px] w-full rounded-2xl overflow-hidden border border-[#2B2B2B] shadow-2xl">
               <Image
-                src="/images/anchor-points.jpg"
+                src={getAssetPath("/images/anchor-points.jpg")}
                 alt="Operario industrial ejecutando inspección técnica de anclajes"
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"

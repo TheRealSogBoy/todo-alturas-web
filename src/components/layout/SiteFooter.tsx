@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin, ShieldCheck, FileCheck2, ArrowUpRight } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/config";
+import { getAssetPath } from "@/lib/paths";
 
 export function SiteFooter() {
   return (
@@ -69,7 +70,7 @@ export function SiteFooter() {
           <div className="lg:col-span-2 space-y-4">
             <div className="relative h-12 w-48">
               <Image
-                src="/images/logo-todo-alturas.png"
+                src={getAssetPath("/images/logo-todo-alturas.png")}
                 alt="Todo Alturas"
                 fill
                 className="object-contain object-left"

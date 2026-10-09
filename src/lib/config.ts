@@ -3,6 +3,8 @@
  * Grupo Empresarial Eficaz - Seguridad Industrial, Formación Técnica y Sistemas de Ingeniería
  */
 
+import { getAssetPath } from "./paths";
+
 export interface ContactLocation {
   city: string;
   phone: string;
@@ -113,7 +115,7 @@ export const SERVICE_LINES: ServiceLine[] = [
     tagline: "Programas avalados para trabajadores y coordinadores de alto riesgo",
     description:
       "Entrenamiento práctico y normativo conforme a la Resolución 4272 de 2021 y estándares para espacios confinados, rescate y tareas de alto riesgo.",
-    image: "/images/industrial-training.jpg",
+    image: getAssetPath("/images/industrial-training.jpg"),
     href: "/capacitaciones",
     items: [
       "Trabajo seguro en alturas (Básico, Avanzado, Reentrenamiento)",
@@ -130,7 +132,7 @@ export const SERVICE_LINES: ServiceLine[] = [
     tagline: "Diseño, suministro, montaje e inspección de sistemas certificados",
     description:
       "Ingeniería de detalle para protección permanente y temporal en cubiertas, fachadas, estructuras industriales y líneas de producción.",
-    image: "/images/engineering-lifelines.jpg",
+    image: getAssetPath("/images/engineering-lifelines.jpg"),
     href: "/ingenieria",
     items: [
       "Instalación de puntos de anclaje fijos y móviles",
@@ -147,7 +149,7 @@ export const SERVICE_LINES: ServiceLine[] = [
     tagline: "Dotación técnica certificada para protección personal y posicionamiento",
     description:
       "Suministro de elementos de protección individual y colectiva certificados bajo normas ANSI/OSHA/EN para contratistas y plantas de producción.",
-    image: "/images/safety-equipment.jpg",
+    image: getAssetPath("/images/safety-equipment.jpg"),
     href: "/equipos",
     items: [
       "Arneses de cuerpo completo multipropósito y dieléctricos",

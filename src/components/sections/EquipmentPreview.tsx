@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, Check } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { getAssetPath } from "@/lib/paths";
 
 export function EquipmentPreview() {
   const categories = [
@@ -76,7 +77,7 @@ export function EquipmentPreview() {
           <div className="lg:col-span-5 relative">
             <div className="relative h-[380px] sm:h-[460px] w-full rounded-2xl overflow-hidden border border-[#2D2D2D] shadow-2xl">
               <Image
-                src="/images/safety-equipment.jpg"
+                src={getAssetPath("/images/safety-equipment.jpg")}
                 alt="Equipos de seguridad certificados para trabajo en alturas"
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"

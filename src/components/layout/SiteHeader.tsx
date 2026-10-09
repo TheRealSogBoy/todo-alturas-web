@@ -14,6 +14,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/config";
+import { getAssetPath } from "@/lib/paths";
 
 export function SiteHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -94,7 +95,7 @@ export function SiteHeader() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative h-12 w-48 sm:h-14 sm:w-56 transition-transform group-hover:scale-[1.02]">
                 <Image
-                  src="/images/logo-todo-alturas.png"
+                  src={getAssetPath("/images/logo-todo-alturas.png")}
                   alt="Todo Alturas - Logotipo Oficial"
                   fill
                   priority
